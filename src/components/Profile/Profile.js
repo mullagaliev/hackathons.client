@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import ProfileUserInfo from './ProfileUserInfo';
 import Stars from './Stars';
@@ -6,36 +7,60 @@ import ProfileRanks from './ProfileRanks';
 import ProfileBio from './ProfileBio';
 import Footer from '../commons/Footer';
 
-const Profile = (props) => {
+import { fetchProfile } from '../../redux/actions';
 
-  return (
-    <div className="profile">
-      <ProfileUserInfo />
+class Profile extends Component {
 
-      <Stars stars={0} />
+  componentDidMount() {
+    this.props.fetchProfile(1);
+  }
 
-      <div className="profile-rankings">
-        <ProfileRanks profileRank={11}>
-          Total hackathons
-        </ProfileRanks>
+  render() {
 
-        <ProfileRanks profileRank={9}>
-          Hackathons wins
-        </ProfileRanks>
+    const { profile } = this.props
+    if(profile.requesting) {
+      return(
+        <div className="profile">Loading...</div>
+      )
+    }
+    if(profile.success) {
+      return (
+        <div className="profile">
+          <ProfileUserInfo {...profile.data} />
 
-        <ProfileRanks profileRank={228}>
-          XP points
-        </ProfileRanks>
+          <Stars stars={profile.data.stat.hackWin} />
 
-        <ProfileRanks profileRank={420}>
-          Total tokens
-        </ProfileRanks>
-      </div>
+          <div className="profile-rankings">
+            <ProfileRanks profileRank={profile.data.stat.hackTotal}>
+              Total hackathons
+            </ProfileRanks>
 
-      <ProfileBio />
-      <Footer />
-    </div>
-  )
+            <ProfileRanks profileRank={profile.data.stat.hackTotal}>
+              Hackathons wins
+            </ProfileRanks>
+
+            <ProfileRanks profileRank={profile.data.stat.xp}>
+              XP points
+            </ProfileRanks>
+
+            <ProfileRanks profileRank={profile.data.stat.coins}>
+              Total tokens
+            </ProfileRanks>
+          </div>
+
+          <ProfileBio {...profile.data} />
+          <Footer />
+        </div>
+      )
+    }
+    return null;
+  }
 }
 
-export default Profile;
+function mapStateToProps(state) {
+  return {
+    profile: state.profile
+  }
+}
+
+export default connect(mapStateToProps, { fetchProfile})(Profile);
