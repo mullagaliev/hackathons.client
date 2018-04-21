@@ -1,0 +1,18 @@
+.input-group {
+  width: 278px;
+  height: 25px;
+  color: $color-text;
+  font-family: 'AvenirNextCyr-Light';
+  font-size: 1.4rem;
+}
+
+.input {
+  font-family: inherit;
+  font-size: inherit;
+  box-sizing: inherit;
+  padding: 4px 0px;
+  color: inherit;
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid $color-text;
+}
