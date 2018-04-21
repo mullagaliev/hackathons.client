@@ -716,9 +716,11 @@ select[multiple] {
     flex-direction: column;
     justify-content: space-around;
     width: 0;
-    display: none;
     opacity: 0;
-    transition: opacity .4s; }
+    transition: all .4s; }
+    .nav-nav__isVisible {
+      opacity: 1;
+      width: 100%; }
     .nav-nav__list {
       display: flex;
       flex-direction: column;
@@ -739,12 +741,15 @@ select[multiple] {
       .nav-nav__link:hover, .nav-nav__link:active {
         transform: translateX(1rem); }
     .nav-nav__close {
+      display: none;
       cursor: pointer;
       position: absolute;
       color: #fff;
       font-size: 5.4rem;
       top: 0;
       left: 2.2rem; }
+      .nav-nav__close-visible {
+        display: inherit; }
   .nav-container {
     max-width: 102.4rem;
     margin: 0 auto;
@@ -753,22 +758,26 @@ select[multiple] {
     align-items: center;
     position: relative; }
   .nav-burger {
+    height: 10.9px;
+    width: 2.4rem;
     position: absolute;
     left: 2.5rem;
-    cursor: pointer;
+    cursor: pointer; }
+  .nav-burger__span {
     transition: transform .2s; }
-    .nav-burger, .nav-burger:before, .nav-burger:after {
+    .nav-burger__span, .nav-burger__span:before, .nav-burger__span:after {
+      position: relative;
       display: inline-block;
       height: 3px;
       width: 2.4rem;
       background: #fff; }
-    .nav-burger:before, .nav-burger:after {
+    .nav-burger__span:before, .nav-burger__span:after {
       position: absolute;
       content: '';
       left: 0; }
-    .nav-burger:before {
+    .nav-burger__span:before {
       top: -.8rem; }
-    .nav-burger:after {
+    .nav-burger__span:after {
       top: .8rem; }
   .nav-logo {
     height: 2.4rem;
