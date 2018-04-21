@@ -1,0 +1,28 @@
+.dropdown {
+  // height: 5.2rem;
+  background: $color-primary;
+  font-family: 'AvenirNextCyr-Bold';
+  font-size: 1.8rem;
+  color: $color-white;
+  text-align: center;
+  line-height: 5.2rem;
+  flex-shrink: 0;
+
+  &-list {
+    list-style-type: none;
+  }
+
+  &-item {
+    display: block;
+  }
+
+  &-content {
+    height: 0;
+    overflow:hidden;
+    transition: all .2s;
+  }
+
+  &-icon {
+    font-size: 1.2rem;
+  }
+}

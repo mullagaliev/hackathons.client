@@ -4,6 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 import Login from './components/Login';
 import Profile from './components/Profile';
 import Nav from './components/Nav';
+import Leaderboard from './components/Leaderboard';
 
 const App = (props) => {
   return (
@@ -12,6 +13,7 @@ const App = (props) => {
       <Switch>
         <Route path='/' exact component={Login}/>
         <Route path='/profile' exact component={Profile} />
+        <Route path='/leaderboard' exact component={Leaderboard} />
       </Switch>
     </React.Fragment>
   )
