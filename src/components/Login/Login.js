@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Nav from '../Nav';
+// import Nav from '../Nav';
 import LoginButton from '../commons/LoginButton';
 import UserAvatar from '../commons/UserAvatar';
 import LoginDivider from './LoginDivider';
@@ -12,7 +12,7 @@ import LoginSignup from './LoginSignup';
 const Login = (props) => {
   return (
     <React.Fragment>
-      <Nav />
+
       <div className="login">
         <UserAvatar />
         <LoginButton showTelegram/>

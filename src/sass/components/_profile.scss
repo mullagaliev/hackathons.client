@@ -1,0 +1,95 @@
+.profile {
+  padding-top: 90px;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  &-star {
+    font-size: 2.2rem;
+    color: $color-sunYellow;
+    display: inline-block;
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+    &__light {
+      opacity: .20;
+    }
+  }
+
+  &-rankings {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &-rating {
+    margin-bottom: 3.3rem;
+  }
+
+  &-rank {
+    flex: 1 0 50%;
+    font-family: 'AvenirNextCyr-Demi';
+    text-align: center;
+
+    &:nth-child(2n) {
+      border-left: 1px solid $color-gray;
+      margin-bottom: 2.5rem;
+    }
+    &__qty {
+      font-size: 3.6rem;
+      color: $color-primary;
+    }
+    &__desc {
+      font-size: 1.4rem;
+      color: $color-text;
+    }
+  }
+
+  &-bio {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 2.2rem;
+    &__title {
+      font-family: 'AvenirNextCyr-Demi';
+      color: $color-text;
+    }
+
+    &__desc {
+      font-family: 'AvenirNextCyr-Regular';
+      color: $color-gray;
+      padding-left: 1.8rem;
+      padding-right: 1.8rem;
+    }
+  }
+}
+
+
+.user-info {
+  text-align: center;
+  color: $color-text;
+  &-img {
+    width: 15.9rem;
+    height: 15.9rem;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 2.2rem;
+
+    & > img {
+      display: block;
+      height: 100%;
+    }
+  }
+
+  &-title {
+    font-family: 'AvenirNextCyr-Bold';
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+  }
+
+  &-position {
+    font-family: 'AvenirNextCyr-Regular';
+    font-size: 1.4rem;
+    margin-bottom: 2.6rem;
+  }
+}
