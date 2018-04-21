@@ -1,0 +1,53 @@
+.nav {
+  height: 50px;
+  background: $color-primary;
+  position: fixed;
+  width: 100%;
+  top:0;
+  left:0;
+  &-container {
+    max-width: 102.4rem;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  &-burger {
+    position: absolute;
+    left: 2.5rem;
+    cursor: pointer;
+    transition: transform .2s;
+    &,
+    &:before,
+    &:after {
+      display: inline-block;
+      height: 3px;
+      width: 2.4rem;
+      background: $color-white;
+    }
+
+    &:before,
+    &:after {
+      position: absolute;
+      content: '';
+      left: 0;
+    }
+
+    &:before {
+      top: -.8rem;
+    }
+
+    &:after {
+      top: .8rem;
+    }
+  }
+
+  &-logo {
+    height: 2.4rem;
+    width: 5.2rem;
+    background: $color-white;
+    margin: 0 auto;
+  }
+}

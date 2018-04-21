@@ -1,10 +1,13 @@
 import React from 'react';
+import { Route, Switch } from 'react-router-dom';
 
-import './index.css';
+import Login from './components/Login';
 
 const App = (props) => {
   return (
-    <p>Hello React</p>
+    <Switch>
+      <Route path='/' exact component={Login}/>
+    </Switch>
   )
 }
 
