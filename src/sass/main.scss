@@ -1,4 +1,4 @@
-@import './abstracts/vars.scss';
+@import './abstracts/vars';
 @import './abstracts/mixins';
 @import './base/base.scss';
 @import './base/fonts';
@@ -14,3 +14,5 @@
 @import './components/footer';
 @import './components/form';
 @import './components/profile';
+@import './components/leader';
+@import './components/dropdown';
