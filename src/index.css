@@ -114,8 +114,8 @@ body {
 
 @font-face {
   font-family: 'thoseicons';
-  src: url("./assets/font-icon/thoseicons.eot?bx7px5");
-  src: url("./assets/font-icon/thoseicons.eot?bx7px5#iefix") format("embedded-opentype"), url("./assets/font-icon/thoseicons.ttf?bx7px5") format("truetype"), url("./assets/font-icon/thoseicons.woff?bx7px5") format("woff"), url("./assets/font-icon/thoseicons.svg?bx7px5#thoseicons") format("svg");
+  src: url("/assets/font-icon/thoseicons.eot?bx7px5");
+  src: url("/assets/font-icon/thoseicons.eot?bx7px5#iefix") format("embedded-opentype"), url("/assets/font-icon/thoseicons.ttf?bx7px5") format("truetype"), url("/assets/font-icon/thoseicons.woff?bx7px5") format("woff"), url("/assets/font-icon/thoseicons.svg?bx7px5#thoseicons") format("svg");
   font-weight: normal;
   font-style: normal; }
 
