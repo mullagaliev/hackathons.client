@@ -19,10 +19,11 @@ class Nav extends Component {
         <div className={navStyles}>
           <span onClick={hideNav} className={closeStyles}>&times;</span>
           <ul className="nav-nav__list">
-            <li className="nav-nav__item"><NavLink className="nav-nav__link" to="/">Home</NavLink></li>
-            <li className="nav-nav__item"><NavLink className="nav-nav__link" to="/leaderboard">Leaderboard</NavLink></li>
-            <li className="nav-nav__item"><NavLink className="nav-nav__link" to="/hackathons">Hackathons</NavLink></li>
-            <li className="nav-nav__item"><NavLink className="nav-nav__link" to="/shop">Shop</NavLink></li>
+            <li onClick={hideNav} className="nav-nav__item"><NavLink className="nav-nav__link" to="/">Home</NavLink></li>
+            <li onClick={hideNav} className="nav-nav__item"><NavLink className="nav-nav__link" to="/leaderboard">Leaderboard</NavLink></li>
+            <li onClick={hideNav} className="nav-nav__item"><NavLink className="nav-nav__link" to="/hackathons">Hackathons</NavLink></li>
+            <li onClick={hideNav} className="nav-nav__item"><NavLink className="nav-nav__link" to="/profile">Profile</NavLink></li>
+            <li onClick={hideNav} className="nav-nav__item"><NavLink className="nav-nav__link" to="/shop">Shop</NavLink></li>
           </ul>
           <Logo />
         </div>
