@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 
 import profile from './reducers/profileReducer';
-
+import sort from './reducers/sortingReducer';
 import { NAV_VISIBLE, NAV_INVISIBLE } from './constants';
 
 
@@ -23,7 +23,8 @@ const nav = (state=initialState, action) => {
 
 const rootReducer = combineReducers({
   nav,
-  profile
+  profile,
+  sort
 });
 
 export default rootReducer;

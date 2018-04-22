@@ -851,11 +851,11 @@ select[multiple] {
     border-radius: 3px;
     color: #fff;
     background: #3f87f5;
-    position: relative;
-    z-index: -1; }
+    position: relative; }
     .btn-login__icon {
       position: absolute;
-      left: 12px; }
+      left: 12px;
+      font-size: 2.2rem; }
   .btn-forgot-pass {
     font-size: 14px; }
 

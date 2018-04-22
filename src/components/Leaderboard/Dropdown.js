@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
+import { sortByWins, sortByXp } from '../../redux/actions';
 class Dropdown extends Component {
 
   state = {
@@ -19,6 +21,11 @@ class Dropdown extends Component {
       unSelectedValue: prevState.selectedValue
     }), () => {
       this.toggleDropdown();
+      if(value === 'Total wins') {
+        this.props.sortByWins()
+      }else if (value === 'XP') {
+        this.props.sortByXp();
+      }
     });
   }
 
@@ -45,5 +52,10 @@ class Dropdown extends Component {
   }
 }
 
+function mapStateToProps(state) {
+  return {
+    sort: state.sort
+  }
+}
 
-export default Dropdown;
+export default connect(mapStateToProps, { sortByWins, sortByXp })(Dropdown);
