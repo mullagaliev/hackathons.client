@@ -22,22 +22,22 @@ class Profile extends Component {
         <div className="profile">
           <ProfileUserInfo {...profile.data} />
 
-          <Stars stars={profile.data.stat.hackWin || 4} />
+          <Stars stars={4} />
 
           <div className="profile-rankings">
-            <ProfileRanks profileRank={profile.data.stat.hackTotal || 6}>
+            <ProfileRanks profileRank={6}>
               Total hackathons
             </ProfileRanks>
 
-            <ProfileRanks profileRank={profile.data.stat.hackTotal || 4}>
+            <ProfileRanks profileRank={ 4}>
               Hackathons wins
             </ProfileRanks>
 
-            <ProfileRanks profileRank={profile.data.stat.xp || 288}>
+            <ProfileRanks profileRank={288}>
               XP points
             </ProfileRanks>
 
-            <ProfileRanks profileRank={profile.data.stat.coins || 420}>
+            <ProfileRanks profileRank={420}>
               Total tokens
             </ProfileRanks>
           </div>

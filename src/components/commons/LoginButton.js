@@ -5,7 +5,7 @@ const LoginButton = (props) => {
 
   if(showTelegram) {
     return (
-      <button className="btn btn-login"><span className="icon-Chip btn-login__icon"></span>Login with Telegram</button>
+      <button className="btn btn-login"><span className="fab fa-telegram-plane btn-login__icon"></span>Login with Telegram</button>
     )
   }
   return (
