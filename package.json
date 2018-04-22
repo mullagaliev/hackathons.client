@@ -2,12 +2,16 @@
   "name": "hack.moscow",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "8.6.0"
+  },
   "dependencies": {
     "axios": "^0.18.0",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.2.2",
+    "recompose": "^0.27.0",
     "redux": "^4.0.0",
     "redux-thunk": "^2.2.0"
   },
@@ -21,6 +25,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "compile:sass": "node-sass -w src/sass/main.scss src/index.css"
+    "compile:sass": "node-sass -w src/sass/main.scss src/index.css",
+    "deploy": "npm run build && move build/index.html build/200.html && surge build hack-moscow.surge.sh"
   }
 }

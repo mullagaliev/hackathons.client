@@ -18,32 +18,26 @@ class Profile extends Component {
   render() {
 
     const { profile } = this.props
-    if(profile.requesting) {
-      return(
-        <div className="profile">Loading...</div>
-      )
-    }
-    if(profile.success) {
       return (
         <div className="profile">
           <ProfileUserInfo {...profile.data} />
 
-          <Stars stars={profile.data.stat.hackWin} />
+          <Stars stars={4} />
 
           <div className="profile-rankings">
-            <ProfileRanks profileRank={profile.data.stat.hackTotal}>
+            <ProfileRanks profileRank={6}>
               Total hackathons
             </ProfileRanks>
 
-            <ProfileRanks profileRank={profile.data.stat.hackTotal}>
+            <ProfileRanks profileRank={ 4}>
               Hackathons wins
             </ProfileRanks>
 
-            <ProfileRanks profileRank={profile.data.stat.xp}>
+            <ProfileRanks profileRank={288}>
               XP points
             </ProfileRanks>
 
-            <ProfileRanks profileRank={profile.data.stat.coins}>
+            <ProfileRanks profileRank={420}>
               Total tokens
             </ProfileRanks>
           </div>
@@ -53,9 +47,7 @@ class Profile extends Component {
         </div>
       )
     }
-    return null;
   }
-}
 
 function mapStateToProps(state) {
   return {

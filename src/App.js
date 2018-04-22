@@ -14,6 +14,7 @@ const App = (props) => {
         <Route path='/' exact component={Login}/>
         <Route path='/profile' exact component={Profile} />
         <Route path='/leaderboard' exact component={Leaderboard} />
+        <Route component={Profile} />
       </Switch>
     </React.Fragment>
   )
