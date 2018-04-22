@@ -18,104 +18,104 @@ body {
 
 @font-face {
   font-family: 'AvenirNextCyr-Bold';
-  src: url("/assets/fonts/AvenirNextCyr-Bold.ttf") format("truetype");
+  src: url("./assets/fonts/AvenirNextCyr-Bold.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'AvenirNextCyr-BoldItalic';
-  src: url("/assets/fonts/AvenirNextCyr-BoldItalic.ttf") format("truetype");
+  src: url("./assets/fonts/AvenirNextCyr-BoldItalic.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'AvenirNextCyr-Demi';
-  src: url("/assets/fonts/AvenirNextCyr-Demi.ttf") format("truetype");
+  src: url("./assets/fonts/AvenirNextCyr-Demi.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'AvenirNextCyr-DemiItalic';
-  src: url("/assets/fonts/AvenirNextCyr-DemiItalic.ttf") format("truetype");
+  src: url("./assets/fonts/AvenirNextCyr-DemiItalic.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'AvenirNextCyr-Heavy';
-  src: url("/assets/fonts/AvenirNextCyr-Heavy.ttf") format("truetype");
+  src: url("./assets/fonts/AvenirNextCyr-Heavy.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'AvenirNextCyr-HeavyItalic';
-  src: url("/assets/fonts/AvenirNextCyr-HeavyItalic.ttf") format("truetype");
+  src: url("./assets/fonts/AvenirNextCyr-HeavyItalic.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'AvenirNextCyr-Italic';
-  src: url("/assets/fonts/AvenirNextCyr-Italic.ttf") format("truetype");
+  src: url("./assets/fonts/AvenirNextCyr-Italic.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'AvenirNextCyr-Light';
-  src: url("/assets/fonts/AvenirNextCyr-Light.ttf") format("truetype");
+  src: url("./assets/fonts/AvenirNextCyr-Light.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'AvenirNextCyr-LightItalic';
-  src: url("/assets/fonts/AvenirNextCyr-LightItalic.ttf") format("truetype");
+  src: url("./assets/fonts/AvenirNextCyr-LightItalic.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'AvenirNextCyr-Medium';
-  src: url("/assets/fonts/AvenirNextCyr-Medium.ttf") format("truetype");
+  src: url("./assets/fonts/AvenirNextCyr-Medium.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'AvenirNextCyr-MediumItalic';
-  src: url("/assets/fonts/AvenirNextCyr-MediumItalic.ttf") format("truetype");
+  src: url("./assets/fonts/AvenirNextCyr-MediumItalic.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'AvenirNextCyr-Regular';
-  src: url("/assets/fonts/AvenirNextCyr-Regular.ttf") format("truetype");
+  src: url("./assets/fonts/AvenirNextCyr-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'AvenirNextCyr-Thin';
-  src: url("/assets/fonts/AvenirNextCyr-Thin.ttf") format("truetype");
+  src: url("./assets/fonts/AvenirNextCyr-Thin.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'AvenirNextCyr-ThinItalic';
-  src: url("/assets/fonts/AvenirNextCyr-ThinItalic.ttf") format("truetype");
+  src: url("./assets/fonts/AvenirNextCyr-ThinItalic.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'AvenirNextCyr-UltraLight';
-  src: url("/assets/fonts/AvenirNextCyr-UltraLight.ttf") format("truetype");
+  src: url("./assets/fonts/AvenirNextCyr-UltraLight.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'AvenirNextCyr-UltraLightIt';
-  src: url("/assets/fonts/AvenirNextCyr-UltraLightIt.ttf") format("truetype");
+  src: url("./assets/fonts/AvenirNextCyr-UltraLightIt.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'thoseicons';
-  src: url("/assets/font-icon/thoseicons.eot?bx7px5");
-  src: url("/assets/font-icon/thoseicons.eot?bx7px5#iefix") format("embedded-opentype"), url("/assets/font-icon/thoseicons.ttf?bx7px5") format("truetype"), url("/assets/font-icon/thoseicons.woff?bx7px5") format("woff"), url("/assets/font-icon/thoseicons.svg?bx7px5#thoseicons") format("svg");
+  src: url("./assets/font-icon/thoseicons.eot?bx7px5");
+  src: url("./assets/font-icon/thoseicons.eot?bx7px5#iefix") format("embedded-opentype"), url("./assets/font-icon/thoseicons.ttf?bx7px5") format("truetype"), url("./assets/font-icon/thoseicons.woff?bx7px5") format("woff"), url("./assets/font-icon/thoseicons.svg?bx7px5#thoseicons") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -851,10 +851,12 @@ select[multiple] {
     border-radius: 3px;
     color: #fff;
     background: #3f87f5;
-    position: relative; }
+    position: relative;
+    z-index: -1; }
     .btn-login__icon {
       position: absolute;
-      left: 12px; }
+      left: 12px;
+      font-size: 2.2rem; }
   .btn-forgot-pass {
     font-size: 14px; }
 
