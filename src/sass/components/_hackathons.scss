@@ -1,0 +1,16 @@
+.hackathons {
+  padding-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  &-heading {
+    font-family: "AvenirNextCyr-Bold";
+    font-size: 18px;
+    color: $color-text;
+    text-align: center;
+    height: 5rem;
+    line-height: 5rem;
+    flex-shrink: 0;
+  }
+}

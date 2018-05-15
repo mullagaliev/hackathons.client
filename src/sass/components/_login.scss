@@ -7,7 +7,7 @@
   align-items: center;
 
   &-divider {
-    font-family: 'AvenirNextCyr-Demi';
+    font-family: "AvenirNextCyr-Demi";
     width: 276px;
     font-size: 14px;
     display: flex;
@@ -19,7 +19,7 @@
       margin: 0 auto;
       text-align: center;
       max-width: 180px;
-      font-family: 'AvenirNextCyr-Demi';
+      font-family: "AvenirNextCyr-Demi";
       font-size: 14px;
       color: $color-text;
     }
@@ -34,9 +34,10 @@
   &-signup {
     font-size: 14px;
     color: $color-text;
+    cursor: pointer;
 
     &-span {
-      font-family: 'AvenirNextCyr-Demi';
+      font-family: "AvenirNextCyr-Demi";
       color: $color-primary;
     }
   }

@@ -1,12 +1,21 @@
-import React from 'react';
+import React from "react";
+import { withRouter } from "react-router-dom";
 
-const Signup = (props) => {
-
+const LoginSignup = props => {
+  const { history } = props;
+  const handleClick = props => {
+    history.push("/signup");
+  };
   return (
     <div className="login-signup">
-      <p className="login-signup-p">Don’t have an acount? <span className="login-signup-span">Sign up</span></p>
+      <p className="login-signup-p">
+        Don’t have an acount?{" "}
+        <span onClick={handleClick} className="login-signup-span">
+          Sign up
+        </span>
+      </p>
     </div>
-  )
-}
+  );
+};
 
-export default Signup;
+export default withRouter(LoginSignup);
