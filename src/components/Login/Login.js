@@ -1,6 +1,6 @@
 import React from "react";
 import TelegramLoginButton from "react-telegram-login";
-import connect from "react-redux";
+import { connect } from "react-redux";
 
 // import Nav from '../Nav';
 import LoginButton from "../commons/LoginButton";
