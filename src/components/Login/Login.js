@@ -1,5 +1,7 @@
 import React from "react";
 import TelegramLoginButton from "react-telegram-login";
+import connect from "react-redux";
+
 // import Nav from '../Nav';
 import LoginButton from "../commons/LoginButton";
 import UserAvatar from "../commons/UserAvatar";
@@ -9,15 +11,16 @@ import PasswordInput from "../commons/PasswordInput";
 import ForgotPassword from "../commons/ForgotPassword";
 import LoginSignup from "./LoginSignup";
 
+import { loginTelegram } from "../../redux/actions";
+
 const Login = props => {
   const handleTelegramResponse = response => {
-    console.log(response);
+    props.loginTelegram(response);
   };
   return (
     <React.Fragment>
       <div className="login">
         <UserAvatar />
-        <LoginButton showTelegram />
         <TelegramLoginButton
           dataOnauth={handleTelegramResponse}
           botName="leader_board_bot"
@@ -33,4 +36,4 @@ const Login = props => {
   );
 };
 
-export default Login;
+export default connect(null, { loginTelegram })(Login);
