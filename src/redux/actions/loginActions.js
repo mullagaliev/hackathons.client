@@ -27,12 +27,7 @@ export const loginTelegram = response => {
   return async dispatch => {
     try {
       dispatch(loginTelegramRequest);
-      let axiosConfig = {
-        headers: {
-          "content-type": "application/json;charset=UTF-8"
-        }
-      };
-      const res = await axios.post(URL, resJson, axiosConfig);
+      const res = await axios.post(URL, resJson);
       dispatch(loginTelegramSuccess(res.data));
     } catch (errors) {
       dispatch(loginTelegramErrors(errors));
