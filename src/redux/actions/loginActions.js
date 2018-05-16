@@ -29,7 +29,7 @@ export const loginTelegram = response => {
       dispatch(loginTelegramRequest);
       let axiosConfig = {
         headers: {
-          "Content-Type": "application/json;charset=UTF-8"
+          "content-type": "application/json;charset=UTF-8"
         }
       };
       const res = await axios.post(URL, resJson, axiosConfig);
