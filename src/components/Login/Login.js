@@ -15,7 +15,7 @@ import { loginByTelegram } from "../../redux/actions";
 
 const Login = props => {
   const handleTelegramResponse = response => {
-    props.loginTelegram(response);
+    props.loginByTelegram(response);
   };
   return (
     <React.Fragment>
