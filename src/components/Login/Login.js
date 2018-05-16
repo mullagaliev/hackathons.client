@@ -11,7 +11,7 @@ import PasswordInput from "../commons/PasswordInput";
 import ForgotPassword from "../commons/ForgotPassword";
 import LoginSignup from "./LoginSignup";
 
-import { loginTelegram } from "../../redux/actions";
+import { loginByTelegram } from "../../redux/actions";
 
 const Login = props => {
   const handleTelegramResponse = response => {
@@ -36,4 +36,4 @@ const Login = props => {
   );
 };
 
-export default connect(null, { loginTelegram })(Login);
+export default connect(null, { loginByTelegram })(Login);

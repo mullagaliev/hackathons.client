@@ -3,6 +3,7 @@ import { combineReducers } from "redux";
 import profile from "./reducers/profileReducer";
 import sort from "./reducers/sortingReducer";
 import login from "./reducers/loginReducer";
+import form from "./reducers/formReducer";
 
 import { NAV_VISIBLE, NAV_INVISIBLE } from "./constants";
 
@@ -25,7 +26,8 @@ const rootReducer = combineReducers({
   nav,
   profile,
   sort,
-  login
+  login,
+  form
 });
 
 export default rootReducer;
