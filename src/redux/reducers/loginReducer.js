@@ -1,8 +1,4 @@
-import {
-  GET_PROFILE_REQUEST,
-  GET_PROFILE_ERROR,
-  GET_PROFILE_SUCCESS
-} from "../constants";
+import { LOGIN_REQUEST, LOGIN_ERROR, LOGIN_SUCCESS } from "../constants";
 
 const initialState = {
   requesting: false,
@@ -11,18 +7,18 @@ const initialState = {
   data: {}
 };
 
-const profileReducer = (state = initialState, action) => {
+const loginReducer = (state = initialState, action) => {
   switch (action.type) {
-    case GET_PROFILE_REQUEST:
+    case LOGIN_REQUEST:
       return { ...state, requesting: true, success: false, errors: false };
-    case GET_PROFILE_ERROR:
+    case LOGIN_ERROR:
       return {
         ...state,
         requesting: false,
         success: false,
         errors: action.errors
       };
-    case GET_PROFILE_SUCCESS:
+    case LOGIN_SUCCESS:
       return {
         ...state,
         requesting: false,
@@ -35,4 +31,4 @@ const profileReducer = (state = initialState, action) => {
   }
 };
 
-export default profileReducer;
+export default loginReducer;
