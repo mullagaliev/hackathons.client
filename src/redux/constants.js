@@ -6,6 +6,8 @@ export const SET_LAST_NAME = "SET_LAST_NAME";
 export const LOGIN_REQUEST = "LOGIN_REQUEST";
 export const LOGIN_ERROR = "LOGIN_ERROR";
 export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
+export const SET_AUTH = "SET_AUTH";
+export const RESET_AUTH = "RESET_AUTH";
 
 export const NAV_VISIBLE = "NAV_VISIBLE";
 export const NAV_INVISIBLE = "NAV_INVISIBLE";

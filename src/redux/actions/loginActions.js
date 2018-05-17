@@ -1,5 +1,7 @@
 import axios from "axios";
 
+import { setAuth } from "./authActions";
+
 import {
   BASE_URL,
   LOGIN_REQUEST,
@@ -46,6 +48,7 @@ export const loginByTelegram = response => {
       dispatch(loginRequest);
       const res = await axios.post(URL, response);
       dispatch(loginSuccess(res.data));
+      dispatch(setAuth(res.data.token));
     } catch (errors) {
       console.log(errors);
       dispatch(loginErrors(errors));

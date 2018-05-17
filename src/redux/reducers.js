@@ -4,6 +4,7 @@ import profile from "./reducers/profileReducer";
 import sort from "./reducers/sortingReducer";
 import login from "./reducers/loginReducer";
 import form from "./reducers/formReducer";
+import auth from "./reducers/authReducer";
 
 import { NAV_VISIBLE, NAV_INVISIBLE } from "./constants";
 
@@ -27,7 +28,8 @@ const rootReducer = combineReducers({
   profile,
   sort,
   login,
-  form
+  form,
+  auth
 });
 
 export default rootReducer;
