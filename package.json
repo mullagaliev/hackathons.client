@@ -7,15 +7,24 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "lodash.throttle": "^4.1.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.2.2",
+    "react-telegram-login": "^1.0.2-beta-6",
+    "recompose": "^0.27.0",
     "redux": "^4.0.0",
+    "redux-auth-wrapper": "^2.0.2",
     "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.1.0",
     "node-sass": "^4.8.3",
+    "prettier": "^1.12.1",
     "react-scripts": "1.1.4",
     "redux-devtools-extension": "^2.13.2"
   },
@@ -24,6 +33,14 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "compile:sass": "node-sass -w src/sass/main.scss src/index.css"
+    "compile:sass": "node-sass -w src/sass/main.scss src/index.css",
+    "deploy": "npm run build && move build/index.html build/200.html && surge build hack-moscow.surge.sh",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,json,css}": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }

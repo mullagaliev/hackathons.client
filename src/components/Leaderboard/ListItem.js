@@ -1,26 +1,26 @@
-import React from 'react';
+import React from "react";
 
-import userAvatar from '../../assets/img/user-avatar.jpg';
+import { SORT_BY_WINS, SORT_BY_XP } from "../../redux/constants";
 
-const ListItem = (props) => {
-  const { rank } = props
+const ListItem = props => {
+  const { name, wins, xp, pic, rank, sortBy } = props;
   return (
     <div className="leader-item">
+      <div className="leader-left">
+        <p className="leader-item__rank">{rank + 1}.</p>
 
-    <div className="leader-left">
-      <p className="leader-item__rank">{rank}.</p>
+        <div className="leader-item__img">
+          <img src={pic} alt="user avatar" />
+        </div>
 
-      <div className="leader-item__img">
-        <img src={userAvatar} alt="user avatar"/>
+        <p className="leader-item__name">{name}</p>
       </div>
 
-      <p className="leader-item__name">Mary Ann</p>
-    </div>
+      {sortBy === SORT_BY_WINS && <p className="leader-item__points">{wins}</p>}
 
-    <p className="leader-item__points">228</p>
-
+      {sortBy === SORT_BY_XP && <p className="leader-item__points">{xp}</p>}
     </div>
-  )
-}
+  );
+};
 
 export default ListItem;
