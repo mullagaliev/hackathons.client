@@ -5,7 +5,6 @@ import ProfileUserInfo from "./ProfileUserInfo";
 import Stars from "./Stars";
 import ProfileRanks from "./ProfileRanks";
 import ProfileBio from "./ProfileBio";
-import Footer from "../commons/Footer";
 
 import { fetchProfile } from "../../redux/actions";
 
@@ -33,7 +32,6 @@ class Profile extends Component {
         </div>
 
         <ProfileBio {...profile.data} />
-        <Footer />
       </div>
     );
   }
