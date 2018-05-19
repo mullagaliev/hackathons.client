@@ -6,7 +6,6 @@ import Profile from "./components/Profile";
 import Nav from "./components/Nav";
 import Leaderboard from "./components/Leaderboard";
 import Hackathons from "./components/Hackathons";
-import Signup from "./components/Signup";
 import SignUpScreen from "./screens/SignUp";
 import SettingsScreen from "./screens/Settings";
 import ChooseSkillsScreen from "./screens/ChooseSkills";
@@ -20,7 +19,7 @@ const App = props => {
     <React.Fragment>
       {/*<Nav />*/}
       <Switch>
-        <Route path="/" exact component={userIsNotAuthenticated(Login)} />
+        <Route path="/login" exact component={userIsNotAuthenticated(Login)} />
         <Route
           path="/signup"
           exact

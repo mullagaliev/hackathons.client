@@ -57,7 +57,6 @@ const Content = styled.section`
 `;
 
 const ContentInside = styled.div`
-  padding: 0 1em;
   overflow: auto;
 `;
 
