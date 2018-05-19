@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import Container from "../../components/commons/Container";
 import Screen from "../../layouts/BaseScreen";
 import Profile from "../../components/Profile";
 
@@ -8,7 +9,9 @@ class ProfileScreen extends Component {
     const { isMy } = this.props;
     return (
       <Screen title="Profile" actionEdit={isMy}>
-        <Profile />
+        <Container>
+          <Profile />
+        </Container>
       </Screen>
     );
   }

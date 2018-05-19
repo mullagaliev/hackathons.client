@@ -47,6 +47,7 @@ const LeftMenu = styled.section`
   bottom: 0;
   background: #3f87f5;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  z-index: 10000;
 `;
 
 const Content = styled.section`
