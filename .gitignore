@@ -9,9 +9,8 @@
 # production
 /build
 
-/src/assets
-
 # misc
+.idea
 .DS_Store
 .env.local
 .env.development.local
