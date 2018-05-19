@@ -7,19 +7,41 @@ import Nav from "./components/Nav";
 import Leaderboard from "./components/Leaderboard";
 import Hackathons from "./components/Hackathons";
 import Signup from "./components/Signup";
+import SignUpScreen from "./screens/SignUp";
+import SettingsScreen from "./screens/Settings";
+import ChooseSkillsScreen from "./screens/ChooseSkills";
+import ProfileScreen from "./screens/Profile";
+
 import userIsAuthenticated from "./components/HoC/userIsAuthenticated";
 import userIsNotAuthenticated from "./components/HoC/userIsNotAuthenticated";
 
 const App = props => {
   return (
     <React.Fragment>
-      <Nav />
+      {/*<Nav />*/}
       <Switch>
         <Route path="/" exact component={userIsNotAuthenticated(Login)} />
         <Route
           path="/signup"
           exact
-          component={userIsNotAuthenticated(Signup)}
+          component={userIsNotAuthenticated(SignUpScreen)}
+        />
+        <Route
+          path="/settings"
+          exact
+          component={userIsNotAuthenticated(SettingsScreen)}
+        />
+        <Route
+          path="/skills"
+          exact
+          component={userIsNotAuthenticated(ChooseSkillsScreen)}
+        />
+        <Route
+          path="/myprofile"
+          exact
+          component={userIsNotAuthenticated(() => (
+            <ProfileScreen isMy={true} />
+          ))}
         />
         <Route path="/profile" exact component={userIsAuthenticated(Profile)} />
         <Route
@@ -31,7 +53,7 @@ const App = props => {
           path="/hackathons/:status"
           component={userIsAuthenticated(Hackathons)}
         />
-        <Route component={Profile} />
+        <Route component={() => <ProfileScreen isMy={false} />} />
       </Switch>
     </React.Fragment>
   );

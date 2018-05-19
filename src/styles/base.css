@@ -1,0 +1,47 @@
+.container {
+  width: 336px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 23px;
+  padding-right: 23px;
+}
+
+@media (min-width: 320px) {
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 576px) {
+  .container {
+    width: 592px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 784px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 991px) {
+  .container {
+    width: 1007px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1216px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
