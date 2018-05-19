@@ -18,6 +18,23 @@
     }
   }
 
+  &-sign-up {
+    font-family: 'AvenirNextCyr-Regular', sans-serif;
+    font-size: 14px;
+    min-width: 279px;
+    width: 100%;
+    height: 39px;
+    border-radius: 3px;
+    color: $color-primary;
+    background: $color-white;
+    position: relative;
+    &__icon {
+      position: absolute;
+      left: 12px;
+      font-size: 2.2rem;
+    }
+  }
+
   &-forgot-pass {
     font-size: 14px;
   }
