@@ -5,6 +5,7 @@ import ProfileUserInfo from "./ProfileUserInfo";
 import Stars from "./Stars";
 import ProfileRanks from "./ProfileRanks";
 import ProfileBio from "./ProfileBio";
+import SkillsList from "../SkillsList";
 
 import { fetchProfile } from "../../redux/actions";
 
@@ -20,6 +21,8 @@ class Profile extends Component {
         <ProfileUserInfo {...profile.data} />
 
         <Stars stars={4} />
+
+        <SkillsList />
 
         <div className="profile-rankings">
           <ProfileRanks profileRank={6}>Total hackathons</ProfileRanks>
