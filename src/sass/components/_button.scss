@@ -39,3 +39,28 @@
     font-size: 14px;
   }
 }
+
+.c-buttons {
+  @include button-reset;
+  &:disabled {
+    opacity: 0.5;
+  }
+  @at-root &--primary {
+    font-family: 'AvenirNextCyr-Regular', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.05px;
+    text-align: center;
+    min-width: 279px;
+    width: 100%;
+    height: 40px;
+    border-radius: 3px;
+    color: $color-white;
+    background: $color-primary;
+    position: relative;
+    &__icon {
+      position: absolute;
+      left: 12px;
+      font-size: 2.2rem;
+    }
+  }
+}

@@ -1112,6 +1112,52 @@ select[multiple] {
   font-size: 14px;
 }
 
+.c-buttons {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  outline: none;
+  background: transparent;
+  /* inherit font & color from ancestor */
+  color: inherit;
+  font: inherit;
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  /* Corrects inability to style clickable `input` types in iOS */
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+.c-buttons::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+.c-buttons:disabled {
+  opacity: 0.5;
+}
+.c-buttons--primary {
+  font-family: "AvenirNextCyr-Regular", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.05px;
+  text-align: center;
+  min-width: 279px;
+  width: 100%;
+  height: 40px;
+  border-radius: 3px;
+  color: #fff;
+  background: #3f87f5;
+  position: relative;
+}
+.c-buttons--primary__icon {
+  position: absolute;
+  left: 12px;
+  font-size: 2.2rem;
+}
+
 .avatar {
   height: 50px;
   width: 50px;

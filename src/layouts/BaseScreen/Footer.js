@@ -14,7 +14,7 @@ class Footer extends Component {
               <span className="fab fa-telegram-plane footer-logos-tg" />
             </div>
             <div className="footer-copyright">
-              <p class="footer-copyright-c">Facepalm team ©</p>
+              <p className="footer-copyright-c">Facepalm team ©</p>
               <p className="footer-copyright-a">All rights reserved</p>
             </div>
           </div>
