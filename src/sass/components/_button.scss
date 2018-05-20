@@ -64,3 +64,22 @@
     }
   }
 }
+
+.c-buttons-link {
+  display: block;
+  border: 1px solid #979797;
+  border-radius: 100px;
+  height: 40px;
+  line-height: 40px;
+  font-family: 'AvenirNextCyr-Regular', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.05px;
+  text-align: center;
+  min-width: 279px;
+  width: 100%;
+  color: $color-text;
+  background: transparent;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+}
