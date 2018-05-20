@@ -32,6 +32,7 @@ export const loginByEmail = (email, pass) => {
       dispatch(loginRequest);
       const res = await axios.post(URL, { email, pwd: pass });
       dispatch(loginSuccess(res.data));
+      dispatch(setAuth(res.data.token));
     } catch (errors) {
       console.log(errors);
       dispatch(loginErrors(errors));

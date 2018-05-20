@@ -7,6 +7,7 @@ import login from "./reducers/loginReducer";
 import form from "./reducers/formReducer";
 import auth from "./reducers/authReducer";
 import sign from "./reducers/signupReducer";
+import users from "./reducers/leaderboardReducer";
 
 import { NAV_VISIBLE, NAV_INVISIBLE } from "./constants";
 
@@ -26,6 +27,7 @@ const nav = (state = initialState, action) => {
 };
 
 const rootReducer = combineReducers({
+  users,
   nav,
   profile,
   sort,

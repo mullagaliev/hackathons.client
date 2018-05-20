@@ -22,4 +22,8 @@ export const GET_PROFILE_SUCCESS = "GET_PROFILE_SUCCESS";
 export const SORT_BY_XP = "SORT_BY_XP";
 export const SORT_BY_WINS = "SORT_BY_WINS";
 
+export const LEADERBOARD_REQUEST = "LEADERBOARD_REQUEST";
+export const LEADERBOARD_ERROR = "LEADERBOARD_ERROR";
+export const LEADERBOARD_SUCCESS = "LEADERBOARD_SUCCESS";
+
 export const BASE_URL = "https://hackathons.space/api";

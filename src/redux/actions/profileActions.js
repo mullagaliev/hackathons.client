@@ -22,13 +22,14 @@ export const getProfileSuccess = data => ({
 });
 
 export const fetchProfile = id => {
+  axios.defaults.headers.common["Authorization"] = localStorage.getItem(
+    "token"
+  );
   const URL = `${BASE_URL}/hackers/${id}`;
   return async dispatch => {
     try {
       dispatch(getProfileRequest);
-
       const res = await axios.get(URL);
-
       dispatch(getProfileSuccess(res.data));
     } catch (errors) {
       dispatch(getProfileErrors(errors));
