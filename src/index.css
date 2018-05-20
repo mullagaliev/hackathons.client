@@ -1193,6 +1193,8 @@ select[multiple] {
   justify-content: center;
 }
 .footer-center {
+  position: relative;
+  z-index: 100000;
   display: flex;
   justify-content: space-around;
   align-items: center;

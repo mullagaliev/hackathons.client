@@ -7,6 +7,8 @@
   justify-content: center;
 
   &-center {
+    position: relative;
+    z-index: 100000;
     display: flex;
     justify-content: space-around;
     align-items: center;
