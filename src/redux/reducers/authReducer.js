@@ -16,6 +16,7 @@ const authReducer = (state = initialState, action) => {
       localStorage.setItem("token", action.token);
       return { ...state, auth: true, token: action.token };
     case RESET_AUTH:
+      localStorage.removeItem("token");
       return { ...state, auth: false, token: "" };
     default:
       return state;

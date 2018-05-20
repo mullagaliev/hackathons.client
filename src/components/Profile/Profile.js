@@ -11,7 +11,7 @@ import { fetchProfile } from "../../redux/actions";
 
 class Profile extends Component {
   componentDidMount() {
-    this.props.fetchProfile(1);
+    this.props.fetchProfile("me");
   }
 
   render() {

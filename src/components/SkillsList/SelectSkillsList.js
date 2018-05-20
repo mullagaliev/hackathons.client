@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import SkillsList from "./index";
 import styled from "styled-components";
+import { connect } from "react-redux";
+import { actions } from "react-redux-form";
 
 const SelectSkillsListStyled = styled.div`
   margin-top: 30px;
@@ -21,7 +23,16 @@ class SelectSkillsList extends Component {
   };
 
   handlerChange = selectedIds => {
+    const { dispatch } = this.props;
     this.setState({ selectedIds });
+    dispatch(
+      actions.change(
+        "settings.skills",
+        selectedIds.map(skill => {
+          return { id: skill };
+        })
+      )
+    );
   };
 
   render() {
@@ -36,6 +47,7 @@ class SelectSkillsList extends Component {
           select
           default_selectedIds={selectedIds}
           onChange={this.handlerChange}
+          {...this.props}
         />
         <button
           disabled={selectedIds.length === 0}
@@ -70,4 +82,4 @@ SelectSkillsList.defaultProps = {
   ]
 };
 
-export default SelectSkillsList;
+export default connect(s => s)(SelectSkillsList);

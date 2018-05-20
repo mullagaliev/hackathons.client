@@ -59,6 +59,7 @@ const Content = styled.section`
 `;
 
 const ContentInside = styled.div`
+  height: 100%;
   overflow: auto;
 `;
 

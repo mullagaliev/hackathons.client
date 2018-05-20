@@ -9,6 +9,8 @@ import auth from "./reducers/authReducer";
 import sign from "./reducers/signupReducer";
 import users from "./reducers/leaderboardReducer";
 
+/* FORMS */
+import { settings, signup } from "./forms";
 import { NAV_VISIBLE, NAV_INVISIBLE } from "./constants";
 
 const initialState = {
@@ -35,13 +37,7 @@ const rootReducer = combineReducers({
   form,
   auth,
   sign,
-  ...createForms({
-    signup: {
-      username: "",
-      pwd: "",
-      email: ""
-    }
-  })
+  ...createForms({ signup, settings })
 });
 
 export default rootReducer;
