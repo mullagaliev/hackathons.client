@@ -7,7 +7,7 @@ import ProfileSettings from "../../components/ProfileSettings";
 class SettingsScreen extends Component {
   render() {
     return (
-      <Screen title="Settings" actionDone={() => {}}>
+      <Screen backButton title="Settings" actionDone={() => {}}>
         <Container>
           <ProfileSettings />
         </Container>

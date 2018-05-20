@@ -7,7 +7,7 @@ import SelectSkillsList from "../../components/SkillsList/SelectSkillsList";
 class ChooseSkillsScreen extends Component {
   render() {
     return (
-      <Screen title="Choose skills" actionProfile={() => {}}>
+      <Screen backButton title="Choose skills" actionProfile={() => {}}>
         <Container>
           <SelectSkillsList />
         </Container>
