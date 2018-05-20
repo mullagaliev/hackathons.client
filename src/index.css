@@ -1325,6 +1325,7 @@ select[multiple] {
 .profile-rank__desc {
   font-size: 1.4rem;
   color: #53535f;
+  padding: 0 10px;
 }
 .profile-bio {
   font-size: 1.4rem;
