@@ -6,7 +6,7 @@ FROM node:8
 ENV NPM_CONFIG_LOGLEVEL warn
 
 # Copy all local files into the image.
-COPY src .
+COPY . .
 
 RUN npm install
 
