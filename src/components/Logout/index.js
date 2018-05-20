@@ -6,7 +6,11 @@ import { resetAuth } from "../../redux/actions/authActions";
 class Logout extends Component {
   render() {
     return (
-      <button onClick={this.props.resetAuth} {...this.props}>
+      <button
+        onClick={this.props.resetAuth}
+        className={this.props.className}
+        style={this.props.style}
+      >
         Logout
       </button>
     );
