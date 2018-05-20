@@ -1,6 +1,8 @@
 import React, { Component, Fragment } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import { connect } from "react-redux";
+import { actions } from "react-redux-form";
 
 const InputStyled = styled.input`
   font-family: inherit;
@@ -31,10 +33,14 @@ const LabelStyled = styled.label`
 class Input extends Component {
   render() {
     const { label, color } = this.props;
+    const { model, dispatch } = this.props;
     return (
       <div>
         {label && <LabelStyled color={color}>{label}</LabelStyled>}
-        <InputStyled {...this.props} />
+        <InputStyled
+          onChange={e => dispatch(actions.change(model, e))}
+          {...this.props}
+        />
       </div>
     );
   }
@@ -46,4 +52,4 @@ Input.defaultProps = {
   color: "white"
 };
 
-export default Input;
+export default connect(s => s)(Input);

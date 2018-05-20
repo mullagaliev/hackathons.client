@@ -28,30 +28,29 @@ const App = props => {
         <Route
           path="/settings"
           exact
-          component={userIsNotAuthenticated(SettingsScreen)}
+          component={userIsAuthenticated(SettingsScreen)}
         />
         <Route
           path="/skills"
           exact
-          component={userIsNotAuthenticated(ChooseSkillsScreen)}
+          component={userIsAuthenticated(ChooseSkillsScreen)}
         />
         <Route
           path="/myprofile"
           exact
-          component={userIsNotAuthenticated(() => (
-            <ProfileScreen isMy={true} />
-          ))}
+          component={userIsAuthenticated(() => <ProfileScreen isMy={true} />)}
         />
         <Route path="/profile" exact component={userIsAuthenticated(Profile)} />
         <Route
           path="/leaderboard"
           exact
-          component={userIsNotAuthenticated(LeaderboardScreen)}
+          component={userIsAuthenticated(LeaderboardScreen)}
         />
         <Route
           path="/hackathons/:status"
           component={userIsAuthenticated(Hackathons)}
         />
+        {/*<Route component={Login} />*/}
         <Route component={() => <ProfileScreen isMy={false} />} />
       </Switch>
     </React.Fragment>

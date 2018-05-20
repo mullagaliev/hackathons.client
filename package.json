@@ -11,11 +11,13 @@
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "react-redux": "^5.0.7",
+    "react-redux-form": "^1.16.8",
     "react-router-dom": "^4.2.2",
     "react-telegram-login": "^1.0.2-beta-6",
     "recompose": "^0.27.0",
     "redux": "^4.0.0",
     "redux-auth-wrapper": "^2.0.2",
+    "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0",
     "styled-components": "^3.2.6"
   },
