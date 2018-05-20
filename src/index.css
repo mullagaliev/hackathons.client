@@ -1158,6 +1158,25 @@ select[multiple] {
   font-size: 2.2rem;
 }
 
+.c-buttons-link {
+  display: block;
+  border: 1px solid #979797;
+  border-radius: 100px;
+  height: 40px;
+  line-height: 40px;
+  font-family: "AvenirNextCyr-Regular", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.05px;
+  text-align: center;
+  min-width: 279px;
+  width: 100%;
+  color: #53535f;
+  background: transparent;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+}
+
 .avatar {
   height: 50px;
   width: 50px;
@@ -1288,6 +1307,7 @@ select[multiple] {
   color: #53535f;
 }
 .user-info-img {
+  position: relative;
   width: 15.9rem;
   height: 15.9rem;
   border-radius: 50%;
@@ -1297,6 +1317,21 @@ select[multiple] {
 .user-info-img > img {
   display: block;
   height: 100%;
+}
+.user-info-img--editable {
+  opacity: 0.5;
+  cursor: pointer;
+}
+.user-info-img--editable:before {
+  content: "EDIT";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "AvenirNextCyr-Regular", sans-serif;
+  font-size: 36px;
+  color: #fff;
+  letter-spacing: 0.12px;
 }
 .user-info-title {
   font-family: "AvenirNextCyr-Bold";

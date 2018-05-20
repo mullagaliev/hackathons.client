@@ -69,15 +69,32 @@
   text-align: center;
   color: $color-text;
   &-img {
+    position: relative;
     width: 15.9rem;
     height: 15.9rem;
     border-radius: 50%;
     overflow: hidden;
     margin-bottom: 2.2rem;
-
     & > img {
       display: block;
       height: 100%;
+    }
+
+    &--editable{
+      opacity: 0.5;
+      cursor: pointer;
+      &:before{
+        content: 'EDIT';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        font-family: "AvenirNextCyr-Regular", sans-serif;
+        font-size: 36px;
+        color: $color-white;
+        letter-spacing: 0.12px;
+      }
     }
   }
 

@@ -2,13 +2,14 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Screen from "../../layouts/BaseScreen";
 import Container from "../../components/commons/Container";
+import ProfileSettings from "../../components/ProfileSettings";
 
 class SettingsScreen extends Component {
   render() {
     return (
       <Screen title="Settings" actionDone={() => {}}>
         <Container>
-          <h1>hello</h1>
+          <ProfileSettings />
         </Container>
       </Screen>
     );
