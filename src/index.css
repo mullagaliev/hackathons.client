@@ -1347,6 +1347,7 @@ select[multiple] {
   color: #53535f;
 }
 .user-info-img {
+  margin: 0 auto;
   position: relative;
   width: 15.9rem;
   height: 15.9rem;
