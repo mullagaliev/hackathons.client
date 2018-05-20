@@ -4,12 +4,12 @@ import { Route, Switch } from "react-router-dom";
 import Login from "./components/Login";
 import Profile from "./components/Profile";
 import Nav from "./components/Nav";
-import Leaderboard from "./components/Leaderboard";
 import Hackathons from "./components/Hackathons";
 import SignUpScreen from "./screens/SignUp";
 import SettingsScreen from "./screens/Settings";
 import ChooseSkillsScreen from "./screens/ChooseSkills";
 import ProfileScreen from "./screens/Profile";
+import LeaderboardScreen from "./screens/Leaderboard";
 
 import userIsAuthenticated from "./components/HoC/userIsAuthenticated";
 import userIsNotAuthenticated from "./components/HoC/userIsNotAuthenticated";
@@ -46,7 +46,7 @@ const App = props => {
         <Route
           path="/leaderboard"
           exact
-          component={userIsAuthenticated(Leaderboard)}
+          component={userIsNotAuthenticated(LeaderboardScreen)}
         />
         <Route
           path="/hackathons/:status"

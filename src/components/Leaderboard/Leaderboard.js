@@ -1,17 +1,15 @@
-import React from 'react';
+import React from "react";
 
-import Dropdown from './Dropdown';
-import List from './List';
+import Dropdown from "./Dropdown";
+import List from "./List";
 
-const LeaderBoard = (props) => {
-
+const LeaderBoard = props => {
   return (
     <div className="leader">
-        <p className="leader-heading">Leaderboard</p>
-        <Dropdown />
-        <List />
+      <Dropdown />
+      <List />
     </div>
   );
-}
+};
 
-export default LeaderBoard
+export default LeaderBoard;

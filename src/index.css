@@ -1345,7 +1345,6 @@ select[multiple] {
 }
 
 .leader {
-  padding-top: 5rem;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -1407,8 +1406,8 @@ select[multiple] {
 }
 
 .dropdown {
-  background: #3f87f5;
-  font-family: "AvenirNextCyr-Bold";
+  background: #53535f;
+  font-family: "AvenirNextCyr-Regular", sans-serif;
   font-size: 1.8rem;
   color: #fff;
   text-align: center;
