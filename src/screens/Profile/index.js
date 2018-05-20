@@ -6,11 +6,11 @@ import Profile from "../../components/Profile";
 
 class ProfileScreen extends Component {
   render() {
-    const { isMy } = this.props;
+    const { isMy, id } = this.props;
     return (
-      <Screen title="Profile" actionEdit={isMy}>
+      <Screen nav={isMy} title="Profile" actionEdit={isMy}>
         <Container>
-          <Profile />
+          <Profile isMy={isMy} id={id} />
         </Container>
       </Screen>
     );
@@ -19,6 +19,7 @@ class ProfileScreen extends Component {
 
 ProfileScreen.propTypes = {};
 ProfileScreen.defaultProps = {
+  id: "me",
   isMy: false
 };
 

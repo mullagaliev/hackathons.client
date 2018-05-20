@@ -1,6 +1,5 @@
 import { SET_AUTH, RESET_AUTH } from "../constants";
 import axios from "axios";
-import Cookies from "cookies-js";
 
 const token = localStorage.getItem("token");
 

@@ -11,11 +11,17 @@ import { fetchProfile } from "../../redux/actions";
 
 class Profile extends Component {
   componentDidMount() {
-    this.props.fetchProfile("me");
+    const { isMy, id } = this.props;
+    console.log(this.props);
+    if (isMy) {
+      this.props.fetchProfile("me");
+    } else {
+      this.props.fetchProfile(id);
+    }
   }
 
   render() {
-    const { profile } = this.props;
+    const { profile, isMy } = this.props;
     const stat = profile.data ? profile.data.stat : null;
     return (
       <div className="profile">
@@ -27,7 +33,7 @@ class Profile extends Component {
         profile.data.skills &&
         profile.data.skills.length > 0 ? (
           <SkillsList data={profile.data.skills} />
-        ) : (
+        ) : isMy ? (
           <NavLink
             className="c-buttons c-buttons--accent"
             onClick={this.handlerDone}
@@ -36,7 +42,7 @@ class Profile extends Component {
           >
             Add skills
           </NavLink>
-        )}
+        ) : null}
 
         {stat && (
           <div className="profile-rankings">
