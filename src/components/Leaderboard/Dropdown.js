@@ -4,9 +4,9 @@ import { connect } from "react-redux";
 import { sortByWins, sortByXp } from "../../redux/actions";
 class Dropdown extends Component {
   state = {
-    selectedValue: "Total wins",
+    selectedValue: "XP",
     isDropdownVisible: false,
-    unSelectedValue: "XP"
+    unSelectedValue: "Total wins"
   };
 
   dropdown = React.createRef();

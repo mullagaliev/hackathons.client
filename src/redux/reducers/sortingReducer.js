@@ -1,7 +1,7 @@
 import { SORT_BY_WINS, SORT_BY_XP } from "../constants";
 
 const initialState = {
-  sortBy: SORT_BY_WINS
+  sortBy: SORT_BY_XP
 };
 
 const sortingReducer = (state = initialState, action) => {
