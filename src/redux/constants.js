@@ -3,6 +3,10 @@ export const SET_PASS = "SET_PASS";
 export const SET_FIRST_NAME = "SET_FIRST_NAME";
 export const SET_LAST_NAME = "SET_LAST_NAME";
 
+export const SIGNUP_REQUEST = "SIGNUP_REQUEST";
+export const SIGNUP_ERROR = "SIGNUP_ERROR";
+export const SIGNUP_SUCCESS = "SIGNUP_SUCCESS";
+
 export const LOGIN_REQUEST = "LOGIN_REQUEST";
 export const LOGIN_ERROR = "LOGIN_ERROR";
 export const LOGIN_SUCCESS = "LOGIN_SUCCESS";

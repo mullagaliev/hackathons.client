@@ -1,11 +1,15 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import { Control, Form, actions } from "react-redux-form";
+import { connect } from "react-redux";
+
+import { signup } from "../../redux/actions/signupActions";
 import AvatarIcon from "../../assets/all/_avatar.svg";
-import Inpute from "../../components/commons/Input";
+import Input from "../../components/commons/Input";
 import SignupLogin from "./SignupLogin";
 
-const SignUpForm = styled.form`
+const SignUpForm = styled(Form)`
   padding-top: 90px;
   .SignUpForm__welcome {
     margin-bottom: 30px;
@@ -39,9 +43,16 @@ const Icon = styled.img`
 `;
 
 class SignUp extends Component {
+  handleSubmit(data) {
+    console.log(data);
+    const { dispatch } = this.props;
+
+    dispatch(signup(data));
+  }
+
   render() {
     return (
-      <SignUpForm>
+      <SignUpForm model="signup" onSubmit={signup => this.handleSubmit(signup)}>
         <div className="SignUpForm__welcome">
           <Icon src={AvatarIcon} className="SignUpForm__icon" />
           <span className="SignUpForm__title">
@@ -49,10 +60,9 @@ class SignUp extends Component {
           </span>
         </div>
         <div className="SignUpForm__inputs">
-          <Inpute type="email" placeholder="E-mail" />
-          <Inpute type="email" placeholder="E-mail" />
-          <Inpute type="email" placeholder="E-mail" />
-          <Inpute type="email" placeholder="E-mail" />
+          <Input model="signup.username" type="text" placeholder="User" />
+          <Input model="signup.email" type="text" placeholder="Email address" />
+          <Input model="signup.pwd" type="password" placeholder="Password" />
         </div>
         <button className="btn btn-sign-up SignUpForm__button" type="submit">
           Sign Up
@@ -66,4 +76,4 @@ class SignUp extends Component {
 SignUp.propTypes = {};
 SignUp.defaultProps = {};
 
-export default SignUp;
+export default connect(null)(SignUp);
