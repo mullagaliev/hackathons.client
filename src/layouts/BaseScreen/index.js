@@ -45,7 +45,7 @@ const LeftMenu = styled.section`
   left: 0;
   right: 0;
   top: 0;
-  bottom: 0;
+  bottom: -200px;
   background: #3f87f5;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
   z-index: 10000;
@@ -69,6 +69,7 @@ const Icon = styled.img`
 `;
 
 const CloseButton = styled.div`
+  align-self: baseline;
   padding: 30px;
   cursor: pointer;
 `;
@@ -118,7 +119,7 @@ class BaseScreen extends Component {
             <ContentInside>{this.props.children}</ContentInside>
           </Content>
         </ContentContainer>
-        {nav && <Footer />}
+        {/*{nav && <Footer />}*/}
       </Wrapper>
     );
   }
