@@ -1,11 +1,14 @@
 .footer {
+  padding: 40px 0;
   width: 100%;
-  height: 10rem;
+  height: auto;
   background: $color-text;
   display: flex;
   justify-content: center;
 
   &-center {
+    position: relative;
+    z-index: 100000;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -15,9 +18,11 @@
   &-logos {
     display: flex;
     flex-basis: 35%;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-
+    &-fb{
+      margin-right: 20px;
+    }
     &-fb,&-tg {
       font-size: 19px;
       color: $color-white;
@@ -25,8 +30,9 @@
   }
 
   &-copyright{
-    font-family: 'AvenirNextCyr-Regular';
+    font-family: 'AvenirNextCyr-Regular', sans-serif;
     color: $color-white;
+    text-align: right;
     &-c {
       font-size: 1.4rem;
     }

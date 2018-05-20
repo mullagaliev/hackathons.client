@@ -1,16 +1,18 @@
 import React from "react";
 
-import userAvatar from "../../assets/img/user-avatar.jpg";
+import userAvatar from "../../assets/all/user-avatar.png";
 
 const ProfileUserInfo = props => {
-  const { name, skill, pic } = props;
+  const { username, skills = [], pic } = props;
   return (
     <div className="user-info">
       <div className="user-info-img">
         <img src={pic || userAvatar} alt="user avatar" />
       </div>
-      <p className="user-info-title">{name || "Mary Ann"}</p>
-      <p className="user-info-position">{skill || "Motion Designer"}</p>
+      <p className="user-info-title">{username || "???"}</p>
+      {/*<p className="user-info-position">*/}
+      {/*{skills.length > 0 ? skills[0].tag : null}*/}
+      {/*</p>*/}
     </div>
   );
 };

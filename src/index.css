@@ -1039,6 +1039,19 @@ select[multiple] {
   color: #3f87f5;
 }
 
+.signup-login {
+  text-align: center;
+  font-family: "AvenirNextCyr-Regular", sans-serif;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.05px;
+}
+.signup-login-span {
+  cursor: pointer;
+  opacity: 1;
+  color: #fff;
+}
+
 .btn {
   border: none;
   margin: 0;
@@ -1072,14 +1085,134 @@ select[multiple] {
   color: #fff;
   background: #3f87f5;
   position: relative;
+  z-index: -1;
 }
 .btn-login__icon {
   position: absolute;
   left: 12px;
   font-size: 2.2rem;
 }
+.btn-sign-up {
+  font-family: "AvenirNextCyr-Regular", sans-serif;
+  font-size: 14px;
+  min-width: 279px;
+  width: 100%;
+  height: 39px;
+  border-radius: 3px;
+  color: #3f87f5;
+  background: #fff;
+  position: relative;
+}
+.btn-sign-up__icon {
+  position: absolute;
+  left: 12px;
+  font-size: 2.2rem;
+}
 .btn-forgot-pass {
   font-size: 14px;
+}
+
+.c-buttons {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  outline: none;
+  background: transparent;
+  /* inherit font & color from ancestor */
+  color: inherit;
+  font: inherit;
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  /* Corrects inability to style clickable `input` types in iOS */
+  -webkit-appearance: none;
+  cursor: pointer;
+  line-height: 40px;
+}
+.c-buttons::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+.c-buttons:disabled {
+  opacity: 0.5;
+}
+.c-buttons--primary {
+  font-family: "AvenirNextCyr-Regular", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.05px;
+  text-align: center;
+  min-width: 279px;
+  width: 100%;
+  height: 40px;
+  border-radius: 3px;
+  color: #fff;
+  background: #3f87f5;
+  position: relative;
+}
+.c-buttons--primary__icon {
+  position: absolute;
+  left: 12px;
+  font-size: 2.2rem;
+}
+.c-buttons--primary {
+  font-family: "AvenirNextCyr-Regular", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.05px;
+  text-align: center;
+  min-width: 279px;
+  width: 100%;
+  height: 40px;
+  border-radius: 3px;
+  color: #fff;
+  background: #3f87f5;
+  position: relative;
+}
+.c-buttons--primary__icon {
+  position: absolute;
+  left: 12px;
+  font-size: 2.2rem;
+}
+.c-buttons--accent {
+  text-decoration: none;
+  font-family: "AvenirNextCyr-Regular", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.05px;
+  text-align: center;
+  min-width: 279px;
+  width: 100%;
+  height: 40px;
+  border-radius: 3px;
+  color: #fff;
+  background: #de4c5e;
+  position: relative;
+}
+.c-buttons--accent__icon {
+  position: absolute;
+  left: 12px;
+  font-size: 2.2rem;
+}
+
+.c-buttons-link {
+  display: block;
+  border: 1px solid #979797;
+  border-radius: 100px;
+  height: 40px;
+  line-height: 40px;
+  font-family: "AvenirNextCyr-Regular", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.05px;
+  text-align: center;
+  min-width: 279px;
+  width: 100%;
+  color: #53535f;
+  background: transparent;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
 }
 
 .avatar {
@@ -1090,13 +1223,16 @@ select[multiple] {
 }
 
 .footer {
+  padding: 40px 0;
   width: 100%;
-  height: 10rem;
+  height: auto;
   background: #53535f;
   display: flex;
   justify-content: center;
 }
 .footer-center {
+  position: relative;
+  z-index: 100000;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -1105,8 +1241,11 @@ select[multiple] {
 .footer-logos {
   display: flex;
   flex-basis: 35%;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+}
+.footer-logos-fb {
+  margin-right: 20px;
 }
 .footer-logos-fb,
 .footer-logos-tg {
@@ -1114,8 +1253,9 @@ select[multiple] {
   color: #fff;
 }
 .footer-copyright {
-  font-family: "AvenirNextCyr-Regular";
+  font-family: "AvenirNextCyr-Regular", sans-serif;
   color: #fff;
+  text-align: right;
 }
 .footer-copyright-c {
   font-size: 1.4rem;
@@ -1144,7 +1284,7 @@ select[multiple] {
 }
 
 .profile {
-  padding-top: 90px;
+  padding-top: 40px;
   min-height: 100%;
   display: flex;
   flex-direction: column;
@@ -1207,6 +1347,7 @@ select[multiple] {
   color: #53535f;
 }
 .user-info-img {
+  position: relative;
   width: 15.9rem;
   height: 15.9rem;
   border-radius: 50%;
@@ -1216,6 +1357,24 @@ select[multiple] {
 .user-info-img > img {
   display: block;
   height: 100%;
+}
+.user-info-img--editable {
+  opacity: 0.5;
+  cursor: pointer;
+}
+.user-info-img--editable:before {
+  content: "EDIT";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "AvenirNextCyr-Regular", sans-serif;
+  font-size: 36px;
+  color: #fff;
+  letter-spacing: 0.12px;
+}
+.user-info-img--editable:hover {
+  opacity: 0.9;
 }
 .user-info-title {
   font-family: "AvenirNextCyr-Bold";
@@ -1229,7 +1388,6 @@ select[multiple] {
 }
 
 .leader {
-  padding-top: 5rem;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -1291,8 +1449,8 @@ select[multiple] {
 }
 
 .dropdown {
-  background: #3f87f5;
-  font-family: "AvenirNextCyr-Bold";
+  background: #53535f;
+  font-family: "AvenirNextCyr-Regular", sans-serif;
   font-size: 1.8rem;
   color: #fff;
   text-align: center;

@@ -11,6 +11,7 @@ import registerServiceWorker from "./registerServiceWorker";
 import { saveState } from "./utils/localStorage";
 
 import "./index.css";
+import "./styles/base.css";
 
 // const state = JSON.parse(localStorage.getItem("state"));
 

@@ -1,17 +1,36 @@
-import React from 'react';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import Dropdown from "./Dropdown";
+import List from "./List";
+import { getLeaderboard } from "../../redux/actions/leaderboardActions";
 
-import Dropdown from './Dropdown';
-import List from './List';
+class Leaderboard extends Component {
+  componentDidMount = () => {
+    setTimeout(() => {
+      this.props.getLeaderboard();
+    }, 100);
+  };
 
-const LeaderBoard = (props) => {
-
-  return (
-    <div className="leader">
-        <p className="leader-heading">Leaderboard</p>
+  render() {
+    const { data } = this.props;
+    return (
+      <div className="leader">
         <Dropdown />
-        <List />
-    </div>
-  );
+        <List data={data} />
+      </div>
+    );
+  }
 }
 
-export default LeaderBoard
+Leaderboard.propTypes = {};
+Leaderboard.defaultProps = {};
+
+export default connect(
+  state => {
+    return {
+      data: state.users.data
+    };
+  },
+  { getLeaderboard }
+)(Leaderboard);

@@ -18,7 +18,106 @@
     }
   }
 
+  &-sign-up {
+    font-family: 'AvenirNextCyr-Regular', sans-serif;
+    font-size: 14px;
+    min-width: 279px;
+    width: 100%;
+    height: 39px;
+    border-radius: 3px;
+    color: $color-primary;
+    background: $color-white;
+    position: relative;
+    &__icon {
+      position: absolute;
+      left: 12px;
+      font-size: 2.2rem;
+    }
+  }
+
   &-forgot-pass {
     font-size: 14px;
   }
+}
+
+.c-buttons {
+  @include button-reset;
+  line-height: 40px;
+  &:disabled {
+    opacity: 0.5;
+  }
+  @at-root &--primary {
+    font-family: 'AvenirNextCyr-Regular', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.05px;
+    text-align: center;
+    min-width: 279px;
+    width: 100%;
+    height: 40px;
+    border-radius: 3px;
+    color: $color-white;
+    background: $color-primary;
+    position: relative;
+    &__icon {
+      position: absolute;
+      left: 12px;
+      font-size: 2.2rem;
+    }
+  }
+  @at-root &--primary {
+    font-family: 'AvenirNextCyr-Regular', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.05px;
+    text-align: center;
+    min-width: 279px;
+    width: 100%;
+    height: 40px;
+    border-radius: 3px;
+    color: $color-white;
+    background: $color-primary;
+    position: relative;
+    &__icon {
+      position: absolute;
+      left: 12px;
+      font-size: 2.2rem;
+    }
+  }
+  @at-root &--accent {
+    text-decoration: none;
+    font-family: 'AvenirNextCyr-Regular', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.05px;
+    text-align: center;
+    min-width: 279px;
+    width: 100%;
+    height: 40px;
+    border-radius: 3px;
+    color: $color-white;
+    background: #DE4C5E;
+    position: relative;
+    &__icon {
+      position: absolute;
+      left: 12px;
+      font-size: 2.2rem;
+    }
+  }
+}
+
+.c-buttons-link {
+  display: block;
+  border: 1px solid #979797;
+  border-radius: 100px;
+  height: 40px;
+  line-height: 40px;
+  font-family: 'AvenirNextCyr-Regular', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.05px;
+  text-align: center;
+  min-width: 279px;
+  width: 100%;
+  color: $color-text;
+  background: transparent;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
 }

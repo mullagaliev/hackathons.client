@@ -3,7 +3,7 @@ import React from "react";
 import { SORT_BY_WINS, SORT_BY_XP } from "../../redux/constants";
 
 const ListItem = props => {
-  const { name, wins, xp, pic, rank, sortBy } = props;
+  const { username, wins, xp, pic, rank, sortBy } = props;
   return (
     <div className="leader-item">
       <div className="leader-left">
@@ -13,7 +13,7 @@ const ListItem = props => {
           <img src={pic} alt="user avatar" />
         </div>
 
-        <p className="leader-item__name">{name}</p>
+        <p className="leader-item__name">{username}</p>
       </div>
 
       {sortBy === SORT_BY_WINS && <p className="leader-item__points">{wins}</p>}

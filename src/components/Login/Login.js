@@ -23,7 +23,7 @@ const Login = props => {
         <UserAvatar />
         <TelegramLoginButton
           dataOnauth={handleTelegramResponse}
-          botName="leader_board_bot"
+          botName="Hk64_bot"
         />
         <LoginDivider />
         <EmailInput />

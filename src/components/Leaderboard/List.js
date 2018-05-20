@@ -2,12 +2,13 @@ import React from "react";
 import { connect } from "react-redux";
 
 import ListItem from "./ListItem";
-import data from "./mockData";
+// import data from "./mockData";
 import { SORT_BY_WINS, SORT_BY_XP } from "../../redux/constants";
 
 const List = props => {
   const { sort } = props;
   const { sortBy } = sort;
+  const { data } = props;
 
   const sortByWins = () => {
     data.sort(function(first, second) {
