@@ -13,7 +13,7 @@ const LinkItem = styled(NavLink)`
   letter-spacing: 0.06px;
   text-align: center;
   height: 40px;
-  line-height: 20px;
+  line-height: 40px;
   background-color: transparent;
   &:hover {
     opacity: 0.7;

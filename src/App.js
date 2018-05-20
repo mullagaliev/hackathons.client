@@ -40,7 +40,13 @@ const App = props => {
           exact
           component={userIsAuthenticated(() => <ProfileScreen isMy={true} />)}
         />
-        <Route path="/profile" exact component={userIsAuthenticated(Profile)} />
+        <Route
+          path="/profile/t/:id"
+          exact
+          component={({ match }) => (
+            <ProfileScreen isMy={false} id={match.params.id} />
+          )}
+        />
         <Route
           path="/leaderboard"
           exact
@@ -50,8 +56,7 @@ const App = props => {
           path="/hackathons/:status"
           component={userIsAuthenticated(Hackathons)}
         />
-        {/*<Route component={Login} />*/}
-        <Route component={() => <ProfileScreen isMy={false} />} />
+        <Route component={userIsNotAuthenticated(Login)} />
       </Switch>
     </React.Fragment>
   );
