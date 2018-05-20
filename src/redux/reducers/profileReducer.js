@@ -1,4 +1,5 @@
 import {
+  UPDATE_PROFILE_SUCCESS,
   GET_PROFILE_REQUEST,
   GET_PROFILE_ERROR,
   GET_PROFILE_SUCCESS
@@ -13,6 +14,9 @@ const initialState = {
 
 const profileReducer = (state = initialState, action) => {
   switch (action.type) {
+    case UPDATE_PROFILE_SUCCESS:
+      window.location.href = "/myprofile";
+      return { ...state };
     case GET_PROFILE_REQUEST:
       return { ...state, requesting: true, success: false, errors: false };
     case GET_PROFILE_ERROR:
