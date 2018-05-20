@@ -8,6 +8,7 @@ import form from "./reducers/formReducer";
 import auth from "./reducers/authReducer";
 import sign from "./reducers/signupReducer";
 import users from "./reducers/leaderboardReducer";
+import skills from "./reducers/skillsReducer";
 
 /* FORMS */
 import { settings, signup } from "./forms";
@@ -29,6 +30,7 @@ const nav = (state = initialState, action) => {
 };
 
 const rootReducer = combineReducers({
+  skills,
   users,
   nav,
   profile,

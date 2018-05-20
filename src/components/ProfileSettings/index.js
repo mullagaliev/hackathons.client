@@ -5,10 +5,12 @@ import { fetchProfile } from "../../redux/actions";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
-import userAvatar from "../../assets/img/user-avatar.jpg";
+import userAvatar from "../../assets/all/user-avatar.png";
 import Input from "../../components/commons/Input";
 import TextArea from "../../components/commons/TextArea";
 import { signup } from "../../redux/actions/signupActions";
+
+import imageGenerator from "../../utils/imageGenerator";
 
 const LinkList = styled.div`
   width: 100%;
@@ -49,7 +51,7 @@ class ProfileSettings extends Component {
 
   render() {
     const { pic, success } = this.props.DefaultSettings;
-    const { settings } = this.props;
+    const { settings, getNewAvatar } = this.props;
     if (!success) return "Loading...";
     return (
       <Form
@@ -58,8 +60,11 @@ class ProfileSettings extends Component {
         onSubmit={settings => this.props.onSubmit(settings)}
       >
         <div className="user-info">
-          <div className="user-info-img user-info-img--editable">
-            <img src={pic || userAvatar} alt="user avatar" />
+          <div
+            className="user-info-img user-info-img--editable"
+            onClick={getNewAvatar}
+          >
+            <img src={settings.pic.value || userAvatar} alt="user avatar" />
           </div>
         </div>
         <LinkList>
@@ -120,5 +125,6 @@ function mapStateToProps(state) {
 
 export default connect(mapStateToProps, {
   fetchDefaultSettings: () => fetchProfile("me"),
-  setDefaultSettings: values => actions.load("settings", values)
+  setDefaultSettings: values => actions.load("settings", values),
+  getNewAvatar: () => actions.change("settings.pic", imageGenerator())
 })(ProfileSettings);

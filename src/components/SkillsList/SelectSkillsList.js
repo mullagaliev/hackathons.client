@@ -4,6 +4,11 @@ import SkillsList from "./index";
 import styled from "styled-components";
 import { connect } from "react-redux";
 import { actions } from "react-redux-form";
+import { getSkills } from "../../redux/actions/skillsActions";
+import {
+  fetchProfile,
+  updateProfile
+} from "../../redux/actions/profileActions";
 
 const SelectSkillsListStyled = styled.div`
   margin-top: 30px;
@@ -19,12 +24,12 @@ const SelectSkillsListStyled = styled.div`
 
 class SelectSkillsList extends Component {
   state = {
-    selectedIds: [3, 4]
+    curSelectedIds: []
   };
 
   handlerChange = selectedIds => {
     const { dispatch } = this.props;
-    this.setState({ selectedIds });
+    this.setState({ curSelectedIds: selectedIds });
     dispatch(
       actions.change(
         "settings.skills",
@@ -35,23 +40,58 @@ class SelectSkillsList extends Component {
     );
   };
 
+  handlerDone = () => {
+    const { dispatch, profile } = this.props;
+
+    const values = { ...this.props.settings };
+    const skills = values.skills
+      ? values.skills.$form.value.map(item => {
+          return {
+            id: item.id
+          };
+        })
+      : [];
+
+    const valuesFormated = {
+      username: profile.data.username,
+      contactPhone: profile.data.contactPhone ? profile.data.contactPhone : " ",
+      bio: profile.data.bio ? profile.data.bio : " ",
+      pic: profile.data.pic ? profile.data.pic : "",
+      skills: skills ? skills : [],
+      email: profile.data.email
+    };
+    dispatch(updateProfile("me", valuesFormated));
+  };
+
+  componentDidMount() {
+    this.props.dispatch(getSkills());
+    if (!this.props.profile.success) {
+      this.props.dispatch(fetchProfile("me"));
+    }
+  }
+
   render() {
-    const { data } = this.props;
-    const { selectedIds } = this.state;
+    const { skills, profile } = this.props;
+    const { curSelectedIds } = this.state;
+    if (!skills.success || !profile.success) return "Loading...";
+    const selectedIds = profile.data.skills.map(skill => {
+      return skill.id;
+    });
     return (
       <SelectSkillsListStyled>
         <h2>Choose up to 5 skills:</h2>
         <SkillsList
           style={{ marginBottom: "20px" }}
-          data={data}
+          data={skills.data}
           select
           default_selectedIds={selectedIds}
           onChange={this.handlerChange}
           {...this.props}
         />
         <button
-          disabled={selectedIds.length === 0}
+          disabled={curSelectedIds.length === 0 || curSelectedIds.length > 5}
           className="c-buttons c-buttons--primary"
+          onClick={this.handlerDone}
         >
           Done!
         </button>
@@ -62,7 +102,7 @@ class SelectSkillsList extends Component {
 
 SelectSkillsList.propTypes = {};
 SelectSkillsList.defaultProps = {
-  data: [
+  skills: [
     {
       id: 1,
       tag: "Backend"
@@ -70,16 +110,16 @@ SelectSkillsList.defaultProps = {
     {
       id: 2,
       tag: "Frontend"
-    },
-    {
-      id: 3,
-      tag: "Design"
-    },
-    {
-      id: 4,
-      tag: "Blockchain"
     }
   ]
 };
 
-export default connect(s => s)(SelectSkillsList);
+function mapStateToProps(state) {
+  return {
+    skills: state.skills,
+    profile: state.profile,
+    settings: state.forms.settings
+  };
+}
+
+export default connect(mapStateToProps, null)(SelectSkillsList);

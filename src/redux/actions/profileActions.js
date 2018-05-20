@@ -32,7 +32,7 @@ export const fetchProfile = id => {
   const URL = `${BASE_URL}/hackers/${id}`;
   return async dispatch => {
     try {
-      dispatch(getProfileRequest);
+      dispatch(getProfileRequest());
       const res = await axios.get(URL);
       dispatch(getProfileSuccess(res.data));
     } catch (errors) {

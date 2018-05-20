@@ -8,30 +8,34 @@ import Container from "../../components/commons/Container";
 import ProfileSettings from "../../components/ProfileSettings";
 import { updateProfile } from "../../redux/actions/profileActions";
 
+import imageGenerator from "../../utils/imageGenerator";
+
 class SettingsScreen extends Component {
-  render() {
-    console.log(this.props.settings.$form.value);
-    return (
-      <Screen
-        backButton
-        title="Settings"
-        actionDone={() => {
-          const values = { ...this.props.settings };
-          const valuesFormated = {
-            username: values.username.value,
-            contactPhone: values.contactPhone.value
-              ? values.contactPhone.value
-              : " ",
-            bio: values.bio.value ? values.bio.value : " ",
-            pic: values.pic.value ? values.pic.value : "1",
-            skills: values.skills.value ? values.skills.value : [],
-            email: values.email.value
+  handlerDone = () => {
+    const values = { ...this.props.settings };
+    const skills = values.skills
+      ? values.skills.$form.value.map(item => {
+          return {
+            id: item.id
           };
-          this.props.updateProfile("me", valuesFormated);
-        }}
-      >
+        })
+      : [];
+    const valuesFormated = {
+      username: values.username.value,
+      contactPhone: values.contactPhone.value ? values.contactPhone.value : " ",
+      bio: values.bio.value ? values.bio.value : " ",
+      pic: values.pic.value ? values.pic.value : imageGenerator(),
+      skills: skills ? skills : [],
+      email: values.email.value
+    };
+    this.props.updateProfile("me", valuesFormated);
+  };
+
+  render() {
+    return (
+      <Screen backButton title="Settings" actionDone={this.handlerDone}>
         <Container>
-          <ProfileSettings />
+          <ProfileSettings actionDone={this.handlerDone} />
         </Container>
       </Screen>
     );

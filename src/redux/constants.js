@@ -30,4 +30,8 @@ export const LEADERBOARD_REQUEST = "LEADERBOARD_REQUEST";
 export const LEADERBOARD_ERROR = "LEADERBOARD_ERROR";
 export const LEADERBOARD_SUCCESS = "LEADERBOARD_SUCCESS";
 
+export const GET_SKILLS_REQUEST = "GET_SKILLS_REQUEST";
+export const GET_SKILLS_ERROR = "GET_SKILLS_ERROR";
+export const GET_SKILLS_SUCCESS = "GET_SKILLS_SUCCESS";
+
 export const BASE_URL = "https://hackathons.space/api";
