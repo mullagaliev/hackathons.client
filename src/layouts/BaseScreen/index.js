@@ -67,12 +67,20 @@ class BaseScreen extends Component {
   };
 
   render() {
-    const { nav, actionEdit, actionProfile, actionDone, title } = this.props;
+    const {
+      backButton,
+      nav,
+      actionEdit,
+      actionProfile,
+      actionDone,
+      title
+    } = this.props;
     return (
       <Wrapper style={this.props.style}>
         {nav && (
           <Header>
             <Nav
+              backButton={backButton}
               onToggleMenu={() => {
                 this.setState({ menuVisible: !this.state.menuVisible });
               }}
@@ -101,6 +109,7 @@ class BaseScreen extends Component {
 
 BaseScreen.propTypes = {};
 BaseScreen.defaultProps = {
+  backButton: false,
   nav: true,
   title: "Default title",
   actionEdit: false,

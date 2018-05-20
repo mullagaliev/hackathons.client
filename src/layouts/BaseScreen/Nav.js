@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
+import BackButton from "./BackButton";
 
 import MenuIcon from "../../assets/all/menu.svg";
 import EditIcon from "../../assets/all/edit.svg";
@@ -35,6 +36,7 @@ const Icon = styled.img`
 class Nav extends Component {
   render() {
     const {
+      backButton,
       onToggleMenu,
       actionEdit,
       actionProfile,
@@ -43,9 +45,15 @@ class Nav extends Component {
     } = this.props;
     return (
       <NavItems>
-        <span className="Nav__item" onClick={onToggleMenu}>
-          <Icon src={MenuIcon} />
-        </span>
+        {backButton ? (
+          <span className="Nav__item">
+            <BackButton />
+          </span>
+        ) : (
+          <span className="Nav__item" onClick={onToggleMenu}>
+            <Icon src={MenuIcon} />
+          </span>
+        )}
         <span className="Header__title">{title}</span>
         <div>
           {actionEdit && (
@@ -71,6 +79,7 @@ class Nav extends Component {
 
 Nav.propTypes = {};
 Nav.defaultProps = {
+  backButton: false,
   onToggleMenu: () => {},
   actionEdit: false,
   actionProfile: false,
