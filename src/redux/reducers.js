@@ -8,7 +8,10 @@ import form from "./reducers/formReducer";
 import auth from "./reducers/authReducer";
 import sign from "./reducers/signupReducer";
 import users from "./reducers/leaderboardReducer";
+import skills from "./reducers/skillsReducer";
 
+/* FORMS */
+import { settings, signup } from "./forms";
 import { NAV_VISIBLE, NAV_INVISIBLE } from "./constants";
 
 const initialState = {
@@ -27,6 +30,7 @@ const nav = (state = initialState, action) => {
 };
 
 const rootReducer = combineReducers({
+  skills,
   users,
   nav,
   profile,
@@ -35,13 +39,7 @@ const rootReducer = combineReducers({
   form,
   auth,
   sign,
-  ...createForms({
-    signup: {
-      username: "",
-      pwd: "",
-      email: ""
-    }
-  })
+  ...createForms({ signup, settings })
 });
 
 export default rootReducer;

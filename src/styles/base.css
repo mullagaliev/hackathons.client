@@ -4,6 +4,7 @@
   margin-right: auto;
   padding-left: 50px;
   padding-right: 50px;
+  padding-bottom: 60px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
