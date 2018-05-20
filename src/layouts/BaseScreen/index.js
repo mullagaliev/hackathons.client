@@ -5,8 +5,9 @@ import LeftMenuContent from "../../components/LeftMenu";
 // import Logout from '../../components/Logout';
 import Container from "../../components/commons/Container";
 import Footer from "./Footer";
-
 import Nav from "./Nav";
+
+import CloseIcon from "../../assets/all/close.svg";
 
 const Wrapper = styled.div`
   display: flex;
@@ -33,7 +34,7 @@ const Header = styled.header`
 const ContentContainer = styled.section`
   flex: 0 1 auto;
   height: 100vh;
-  position: relative;
+  //position: relative;
   display: flex;
   flex-flow: row nowrap;
 `;
@@ -44,7 +45,7 @@ const LeftMenu = styled.section`
   left: 0;
   right: 0;
   top: 0;
-  bottom: 0;
+  bottom: -200px;
   background: #3f87f5;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
   z-index: 10000;
@@ -61,9 +62,25 @@ const ContentInside = styled.div`
   overflow: auto;
 `;
 
+const Icon = styled.img`
+  display: inline-block;
+  width: auto;
+  height: 15px;
+`;
+
+const CloseButton = styled.div`
+  align-self: baseline;
+  padding: 30px;
+  cursor: pointer;
+`;
+
 class BaseScreen extends Component {
   state = {
     menuVisible: false
+  };
+
+  handlerToggleMenu = () => {
+    this.setState({ menuVisible: !this.state.menuVisible });
   };
 
   render() {
@@ -81,9 +98,7 @@ class BaseScreen extends Component {
           <Header>
             <Nav
               backButton={backButton}
-              onToggleMenu={() => {
-                this.setState({ menuVisible: !this.state.menuVisible });
-              }}
+              onToggleMenu={this.handlerToggleMenu}
               title={title}
               actionEdit={actionEdit}
               actionProfile={actionProfile}
@@ -94,6 +109,9 @@ class BaseScreen extends Component {
         <ContentContainer>
           <LeftMenu visible={this.state.menuVisible}>
             <Container style={{ padding: "5px" }}>
+              <CloseButton onClick={this.handlerToggleMenu}>
+                <Icon src={CloseIcon} />
+              </CloseButton>
               <LeftMenuContent />
             </Container>
           </LeftMenu>
@@ -101,7 +119,7 @@ class BaseScreen extends Component {
             <ContentInside>{this.props.children}</ContentInside>
           </Content>
         </ContentContainer>
-        {nav && <Footer />}
+        {/*{nav && <Footer />}*/}
       </Wrapper>
     );
   }

@@ -4,6 +4,10 @@
   margin-right: auto;
   padding-left: 50px;
   padding-right: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
 @media (min-width: 320px) {
