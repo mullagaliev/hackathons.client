@@ -8,7 +8,7 @@ class ProfileScreen extends Component {
   render() {
     const { isMy, id } = this.props;
     return (
-      <Screen nav={isMy} title="Profile" actionEdit={isMy}>
+      <Screen title="Profile" actionEdit={isMy}>
         <Container>
           <Profile isMy={isMy} id={id} />
         </Container>

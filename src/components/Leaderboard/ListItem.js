@@ -1,11 +1,15 @@
 import React from "react";
+import { withRouter } from "react-router";
 
 import { SORT_BY_WINS, SORT_BY_XP } from "../../redux/constants";
 
 const ListItem = props => {
-  const { username, wins, xp, pic, rank, sortBy } = props;
+  const { id, username, wins, xp, pic, rank, sortBy } = props;
   return (
-    <div className="leader-item">
+    <div
+      className="leader-item"
+      onClick={() => props.history.push(`/profile/t/${id}`)}
+    >
       <div className="leader-left">
         <p className="leader-item__rank">{rank + 1}.</p>
 
@@ -23,4 +27,4 @@ const ListItem = props => {
   );
 };
 
-export default ListItem;
+export default withRouter(ListItem);
